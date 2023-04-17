@@ -1,0 +1,62 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+/* Määritellään Flexin avulla vanhempi (body) ja sen lapset(header) nav section footer aside */
+body {
+  display: flex; /* otetaan flex käyttöön vanhemmassa */
+  flex-direction: row; /* määritellään flexin suunnaksi rivi */
+  flex-wrap: wrap;
+}
+/* bodyn lapset */
+body > * {
+  flex-grow: 1; /* jos lapset flex-gows on lapsissa sama -->> lapset yhtä leveitä */
+  flex-basis: 100%;
+}
+body > section {
+  flex-basis: 0;
+}
+body > aside {
+  flex-basis: 0;
+}
+header {
+  background-color: red;
+  padding: 1rem;
+  color: white;
+}
+
+nav {
+  background-color: orangered;
+  padding: 1rem;
+  color: white;
+}
+section > p {
+  margin-block-end: 1rem;
+}
+section {
+  background-color: orange;
+  padding: 1rem;
+  color: white;
+}
+
+article {
+  background-color: #9cbf30;
+  padding: 1rem;
+  margin-block-end: 1rem;
+  color: white;
+}
+aside {
+  background-color: skyblue;
+  padding: 1rem;
+  color: white;
+}
+footer {
+  background-color: violet;
+  padding: 1rem;
+  color: white;
+  clear: both;
+}
